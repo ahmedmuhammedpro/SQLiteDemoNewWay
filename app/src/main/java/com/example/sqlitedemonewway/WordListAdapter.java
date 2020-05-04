@@ -33,7 +33,7 @@ public class WordListAdapter extends RecyclerView.Adapter<WordListAdapter.WordVi
             Word currentWord = words.get(position);
             holder.wordTextView.setText(currentWord.getWord());
         } else {
-            holder.wordTextView.setText("no word");
+            holder.wordTextView.setText(R.string.no_word);
         }
     }
 
@@ -42,7 +42,7 @@ public class WordListAdapter extends RecyclerView.Adapter<WordListAdapter.WordVi
         return words != null? words.size() : 0;
     }
 
-    public void setWords(List<Word> words) {
+    void setWords(List<Word> words) {
         this.words = words;
         notifyDataSetChanged();
     }

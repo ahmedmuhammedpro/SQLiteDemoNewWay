@@ -6,7 +6,7 @@ import androidx.lifecycle.LiveData;
 
 import java.util.List;
 
-public class WordRepository {
+class WordRepository {
 
     private WordDao wordDao;
     private LiveData<List<Word>> allWords;
@@ -21,7 +21,7 @@ public class WordRepository {
         WordRoomDatabase.databaseExecutors.execute(() -> wordDao.insert(word));
     }
 
-    public LiveData<List<Word>> getAllWords() {
+    LiveData<List<Word>> getAllWords() {
         return allWords;
     }
 }
